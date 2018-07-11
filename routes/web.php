@@ -12,9 +12,20 @@
 */
 
 Route::get('/', 'FrontpageController@index')->name('frontpage');
+
 Route::get('/microblog', 'MicroblogController@index')->name('microblog');
+
 Route::post('/microblog/create', 'MicroblogController@create_post')->middleware('auth')->name('microblog_create_post');
+Route::post('/microblog/create_comment/{post_id}', 'MicroblogController@create_comment')->middleware('auth')->name('microblog_create_comment');
+
 Route::get('/microblog/load_new/{start_id}', 'MicroblogController@load_new')->name('load_new_posts');
+
 Route::get('/microblog/load_older/{start_id}', 'MicroblogController@load_older')->name('load_older_posts');
+
 Route::get('/microblog/init/{limit}', 'MicroblogController@init')->name('microblog_init');
+
+Route::get('/microblog/show/{id}', 'MicroblogController@show_post')->name('microblog_show_post');
+
+Route::get('/microblog/load/{id}', 'MicroblogController@load_post')->name('microblog_load_post');
+
 Auth::routes();

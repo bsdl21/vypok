@@ -1,0 +1,52 @@
+#posts {
+	.post {
+		padding-top:10px;
+		padding-bottom: 10px;
+		header {
+			.author {
+				font-weight:bold;
+			}
+			.upvotes {
+				float:right;
+			}
+		}
+	}
+}
+
+#comments {
+	.comment {
+		padding-top:10px;
+		padding-bottom: 10px;
+		header {
+			.author {
+				font-weight:bold;
+			}
+			.upvotes {
+				float:right;
+			}
+		}
+	}
+}
+
+#post-form, #comment-form {
+	textarea {
+		width:100%;
+	}
+}
+#comment-form {
+	display:none;
+}
+.loading {
+	padding:10px;
+}
+
+.loading img {
+	display:block;
+	margin: 0 auto;
+	height:45px;
+	width:45px;
+}
+
+.loading-bottom  {
+	display:none !important;
+}

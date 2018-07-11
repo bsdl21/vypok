@@ -1,0 +1,46 @@
+#posts .post {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#posts .post header .author {
+  font-weight: bold;
+}
+#posts .post header .upvotes {
+  float: right;
+}
+
+#comments .comment {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#comments .comment header .author {
+  font-weight: bold;
+}
+#comments .comment header .upvotes {
+  float: right;
+}
+
+#post-form textarea, #comment-form textarea {
+  width: 100%;
+}
+
+#comment-form {
+  display: none;
+}
+
+.loading {
+  padding: 10px;
+}
+
+.loading img {
+  display: block;
+  margin: 0 auto;
+  height: 45px;
+  width: 45px;
+}
+
+.loading-bottom {
+  display: none !important;
+}
+
+/*# sourceMappingURL=microblog.css.map */

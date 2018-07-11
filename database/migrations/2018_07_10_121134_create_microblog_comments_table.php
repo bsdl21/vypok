@@ -19,9 +19,9 @@ class CreateMicroblogCommentsTable extends Migration
 			$table->text('content');
 			$table->integer("upvotes")->default(0);
 			$table->text('upvoted_users')->default("");
-			$table->integer("post");
+			$table->integer("post_id")->references('id')->on('microblog_posts');
+			$table->integer("reply_to");
             $table->timestamps();
-			$table->nestedSet();
         });
     }
 

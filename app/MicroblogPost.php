@@ -13,7 +13,7 @@ class MicroblogPost extends Model
 	];
 	public function comments()
 	{
-		return $this->hasMany('App\MicroblogComment');
+		return $this->hasMany(MicroblogComment::class, 'post_id');
 	}
 	public function get_post($id)
 	{

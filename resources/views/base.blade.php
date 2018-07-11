@@ -8,14 +8,14 @@
 	<title>Vypok - @yield('title')</title>
 	<!-- JS & CSS (bootstrap, jQuery included) -->
 	<script src="{{ asset('js/app.js') }}"></script>
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 	@yield('head')
 </head>
 <body>
-	<header id="page-header">
+	<header id="page-header" class="container">
 		<h1><a href="/">Vypok.ru</a></h1>
 	</header>
-	<nav id="page-nav">
+	<nav id="page-nav" class="container">
 		<ul>
 			@guest
 				<li>
@@ -43,11 +43,12 @@
 			<li><a href="">Link 3</a></li>
 		</ul>
 	</nav>
-	<div id="container">
+	<div class="container">
 		@yield('content')
 	</div>
-	<footer id="page-footer">
+	<footer id="page-footer" class="container">
 		Vypok;
 	</footer>
+	@yield('footer')
 </body>
 </html>
